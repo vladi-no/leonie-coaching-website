@@ -483,7 +483,7 @@ main {
 /* Mobile adjustments */
 @media (max-width: 700px) {
   .ivy-topright {
-    width: 210px;
+    width: 140px;
     opacity: 0.15;
     top: -20px;
     right: -10px;
