@@ -63,7 +63,7 @@ img {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 0rem;
+  padding: 0;
 }
 
 .section {
@@ -276,6 +276,9 @@ main {
   .intro-image {
     order: -1;
   }
+  .container {
+    padding: 0 1rem;
+  }
 }
 
 /* =========================================
@@ -285,9 +288,6 @@ main {
   .about-img-right {
     justify-self: center;
     padding-left: 0;
-  }
-  .container {
-    padding: 0 1rem;
   }
 }
 
