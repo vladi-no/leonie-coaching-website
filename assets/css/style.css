@@ -35,6 +35,19 @@ body {
 }
 
 /* =========================================
+   Typography helpers
+========================================= */
+.nowrap {
+  white-space: nowrap;
+}
+
+.phone-spaced {
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* =========================================
    Images
 ========================================= */
 img {
@@ -173,10 +186,6 @@ main {
   gap: 0.75rem;
 }
 
-.nowrap {
-  white-space: nowrap;
-}
-
 /* =========================================
    Buttons
 ========================================= */
@@ -254,7 +263,6 @@ main {
 
 .intro-image img {
   width: 100%;
-  border-radius: var(--radius-xl);
   object-fit: cover;
   box-shadow: var(--shadow-soft);
   max-width: 90%;
@@ -267,6 +275,16 @@ main {
   }
   .intro-image {
     order: -1;
+  }
+}
+
+/* =========================================
+   About Page – Image Positioning (Desktop)
+========================================= */
+@media (min-width: 801px) {
+  .about-img-right {
+    justify-self: center;
+    padding-left: 0;
   }
 }
 
@@ -337,7 +355,7 @@ main {
 }
 
 /* =========================================
-   Responsive
+   Responsive (Tablet & Down)
 ========================================= */
 @media (max-width: 800px) {
   .header-inner {
@@ -362,7 +380,7 @@ main {
   .main-nav {
     gap: 0.4rem 0.6rem !important;
     font-size: 0.82rem !important;
-    padding: 0 0.75rem;        /* ← NEW: left/right breathing space */
+    padding: 0 0.75rem;
   }
 
   .nav-link {
@@ -380,15 +398,5 @@ main {
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
-  }
-}
-
-/* =========================================
-   About Page – Image Positioning (Desktop)
-========================================= */
-@media (min-width: 801px) {
-  .about-img-right {
-    justify-self: center;
-    padding-left: 0;
   }
 }
