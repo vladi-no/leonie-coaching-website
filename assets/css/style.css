@@ -436,3 +436,43 @@ main {
   width: 22px;
   height: 22px;
 }
+
+/* =========================================
+   Decorative Ivy – Corner Artwork
+========================================= */
+.ivy {
+  position: fixed;
+  pointer-events: none;        /* don't block clicks */
+  z-index: 11;                 /* stays behind content */
+  opacity: 0.9;               /* soft, subtle vibe */
+}
+
+.ivy-topleft {
+  top: 0;
+  left: 0;
+  width: 24vw;
+  aspect-ratio: 1 / 1.4;
+  background-image: url("../img/ivy-topleft.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+/* Mobile adjustments: smaller + less intrusive */
+@media (max-width: 700px) {
+  .ivy-topleft {
+    width: 210px;
+    opacity: 0.15;
+    top: -20px;
+    left: -10px;
+  }
+}
+
+.autumn-leaves {
+  max-width: 360px;
+  margin-top: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
