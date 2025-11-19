@@ -367,10 +367,11 @@ img {
 }
 
 /* =========================================
-   About Page — Shift Images Right on Desktop
+   About Page – Image Positioning (Desktop)
 ========================================= */
 @media (min-width: 801px) {
   .about-img-right {
-    padding-left: 4rem;
+    justify-self: center;
+    padding-left: 0;
   }
 }
