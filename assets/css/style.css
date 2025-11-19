@@ -400,3 +400,36 @@ main {
     align-items: stretch;
   }
 }
+
+/* =========================================
+   Messaging Icons Row
+========================================= */
+.messaging-links {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0.4rem 0 1rem;
+}
+
+.msg-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.msg-icon:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.10);
+  border-color: var(--color-primary-soft);
+}
+
+.msg-icon img {
+  width: 22px;
+  height: 22px;
+}
