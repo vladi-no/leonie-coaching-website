@@ -468,6 +468,29 @@ main {
   }
 }
 
+.ivy-topright {
+  top: 0;
+  right: 0;
+  width: 18vw;
+  aspect-ratio: 1 / 1.4;
+  background-image: url("../img/ivy-topright.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+  opacity: 0.9;
+}
+
+/* Mobile adjustments */
+@media (max-width: 700px) {
+  .ivy-topright {
+    width: 210px;
+    opacity: 0.15;
+    top: -20px;
+    right: -10px;
+  }
+}
+
+
 .autumn-leaves {
   max-width: 360px;
   margin-top: 2rem;
