@@ -1,6 +1,6 @@
-/* =========================================
+/* =========================================================
    Base Variables & Global Reset
-========================================= */
+========================================================= */
 :root {
   --color-bg: #f9f5f0;
   --color-bg-alt: #ffffff;
@@ -9,10 +9,14 @@
   --color-text: #1f1f1f;
   --color-muted: #6b6b6b;
   --color-border: #e2d7cf;
-  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
+
+  --shadow-soft: 0 10px 30px rgba(0,0,0,0.06);
+
   --radius-lg: 16px;
   --radius-xl: 24px;
+
   --max-width: 1040px;
+
   --transition-fast: 0.2s ease-out;
 }
 
@@ -34,9 +38,10 @@ body {
   line-height: 1.6;
 }
 
-/* =========================================
-   Typography helpers
-========================================= */
+
+/* =========================================================
+   Typography
+========================================================= */
 .nowrap {
   white-space: nowrap;
 }
@@ -47,18 +52,20 @@ body {
   display: inline-block;
 }
 
-/* =========================================
+
+/* =========================================================
    Images
-========================================= */
+========================================================= */
 img {
   display: block;
   max-width: 100%;
   border-radius: var(--radius-xl);
 }
 
-/* =========================================
+
+/* =========================================================
    Layout Helpers
-========================================= */
+========================================================= */
 .container {
   width: 100%;
   max-width: var(--max-width);
@@ -86,9 +93,10 @@ img {
   margin: 2rem 0;
 }
 
-/* =========================================
+
+/* =========================================================
    Sticky Footer Layout
-========================================= */
+========================================================= */
 .site-body {
   min-height: 100vh;
   display: flex;
@@ -99,9 +107,10 @@ main {
   flex: 1;
 }
 
-/* =========================================
+
+/* =========================================================
    Header & Navigation
-========================================= */
+========================================================= */
 .site-header {
   position: sticky;
   top: 0;
@@ -148,9 +157,34 @@ main {
   border-bottom-color: var(--color-primary);
 }
 
-/* =========================================
+
+/* =========================================================
+   Logo + Tagline
+========================================================= */
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-tagline {
+  font-size: 1.1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.logo-tagline span {
+  font-weight: 400;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+
+/* =========================================================
    Hero Section
-========================================= */
+========================================================= */
 .hero {
   padding: 3rem 0 2.5rem;
 }
@@ -186,9 +220,10 @@ main {
   gap: 0.75rem;
 }
 
-/* =========================================
+
+/* =========================================================
    Buttons
-========================================= */
+========================================================= */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -229,9 +264,10 @@ main {
   border-color: var(--color-primary-soft);
 }
 
-/* =========================================
+
+/* =========================================================
    Hero Aside
-========================================= */
+========================================================= */
 .hero-aside {
   background: var(--color-bg-alt);
   padding: 1.6rem 1.5rem;
@@ -251,9 +287,10 @@ main {
   font-size: 0.95rem;
 }
 
-/* =========================================
-   Intro Block with Portrait
-========================================= */
+
+/* =========================================================
+   Intro Block
+========================================================= */
 .intro-grid {
   display: grid;
   grid-template-columns: 2fr 1.3fr;
@@ -268,32 +305,20 @@ main {
   max-width: 90%;
 }
 
-/* Mobile stacking */
-@media (max-width: 800px) {
-  .intro-grid {
-    grid-template-columns: 1fr;
-  }
-  .intro-image {
-    order: -1;
-  }
-  .container {
-    padding: 0 1rem;
-  }
-}
 
-/* =========================================
-   About Page – Image Positioning (Desktop)
-========================================= */
+/* =========================================================
+   About Page
+========================================================= */
 @media (min-width: 801px) {
   .about-img-right {
     justify-self: center;
-    padding-left: 0;
   }
 }
 
-/* =========================================
+
+/* =========================================================
    Referenzen
-========================================= */
+========================================================= */
 .references-grid {
   display: grid;
   gap: 1.5rem;
@@ -320,12 +345,13 @@ main {
   color: var(--color-primary);
 }
 
-/* =========================================
+
+/* =========================================================
    Footer
-========================================= */
+========================================================= */
 .site-footer {
   border-top: 1px solid var(--color-border);
-  background: rgba(255, 255, 255, 1);
+  background: #fff;
   padding: 1.25rem 0 1.75rem;
   margin-top: 2rem;
   font-size: 0.9rem;
@@ -357,56 +383,10 @@ main {
   color: var(--color-primary);
 }
 
-/* =========================================
-   Responsive (Tablet & Down)
-========================================= */
-@media (max-width: 800px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 
-  .main-nav {
-    justify-content: flex-start;
-  }
-
-  .hero-inner,
-  .two-columns {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =========================================
-   Mobile Nav (extra small devices)
-========================================= */
-@media (max-width: 500px) {
-  .main-nav {
-    gap: 0.4rem 0.6rem !important;
-    font-size: 0.82rem !important;
-    padding: 0 0.75rem;
-  }
-
-  .nav-link {
-    padding-bottom: 0.05rem;
-  }
-
-  .header-inner {
-    align-items: center;
-  }
-
-  .hero {
-    padding-top: 2rem;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-}
-
-/* =========================================
-   Messaging Icons Row
-========================================= */
+/* =========================================================
+   Messaging Icons
+========================================================= */
 .messaging-links {
   display: flex;
   gap: 0.75rem;
@@ -423,12 +403,15 @@ main {
   background: var(--color-bg-alt);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-soft);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
 }
 
 .msg-icon:hover {
   transform: translateY(-1px);
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.10);
   border-color: var(--color-primary-soft);
 }
 
@@ -437,14 +420,15 @@ main {
   height: 22px;
 }
 
-/* =========================================
-   Decorative Ivy – Corner Artwork
-========================================= */
+
+/* =========================================================
+   Decorative Ivy
+========================================================= */
 .ivy {
   position: fixed;
-  pointer-events: none;        /* don't block clicks */
-  z-index: 11;                 /* stays behind content */
-  opacity: 0.9;               /* soft, subtle vibe */
+  pointer-events: none;
+  z-index: 11;
+  opacity: 0.9;
 }
 
 .ivy-topleft {
@@ -458,7 +442,6 @@ main {
   background-position: top left;
 }
 
-/* Mobile adjustments: smaller + less intrusive */
 @media (max-width: 700px) {
   .ivy-topleft {
     width: 210px;
@@ -477,10 +460,8 @@ main {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top right;
-  opacity: 0.9;
 }
 
-/* Mobile adjustments */
 @media (max-width: 700px) {
   .ivy-topright {
     width: 140px;
@@ -490,26 +471,21 @@ main {
   }
 }
 
-
 .autumn-leaves {
   max-width: 300px;
-  margin-top: 4rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 4rem auto 0;
   opacity: 0.9;
 }
 
 .spring-branch {
   display: block;
-  margin: -1rem auto 0 auto;   /* centered + space above */
-  width: 260px;               /* adjust as needed */
-  opacity: 1;              /* make it soft and cute */
+  margin: -1rem auto 0;
+  width: 260px;
+  opacity: 1;
   pointer-events: none;
-
-  transform: translateY(84px);
   position: relative;
-  z-index: -1; 
+  transform: translateY(84px);
+  z-index: -1;
 }
 
 @media (max-width: 700px) {
@@ -517,5 +493,92 @@ main {
     width: 260px;
     opacity: 0.8;
     margin-top: -1rem;
+  }
+}
+
+
+/* =========================================================
+   Responsive Adjustments
+========================================================= */
+
+@media (max-width: 800px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+  }
+
+  .hero-inner,
+  .two-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-image {
+    order: -1;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .logo-wrap {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .logo-tagline {
+    font-size: 1rem;
+    white-space: normal;
+  }
+
+  .logo-tagline span {
+    font-size: 0.95rem;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .logo img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-nav {
+    gap: 0.4rem 0.6rem !important;
+    font-size: 0.82rem !important;
+    padding: 0 0.75rem;
+  }
+
+  .nav-link {
+    padding-bottom: 0.05rem;
+  }
+
+  .hero {
+    padding-top: 2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
